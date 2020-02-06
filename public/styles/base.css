@@ -1,0 +1,9 @@
+html {
+  background-color: rgba(172, 194, 241, 0.5)
+}
+
+#formsection {
+  width: 300px;
+  height: auto;
+  margin: auto;
+}
