@@ -47,24 +47,37 @@ app.get('/searches/new', (request, response) => {
 // });
 
 app.post('/searches', (request, response) => {
-  console.log(request.body);
-  let title = request.body.title || 'this book';
-  let author = request.body.author || 'this author';
-  let url = `https://www.googleapis.com/books/v1/volumes?q=intitle:${title}`;
-  console.log(url);
+  try{
+    console.log('body', request.body);
+    let title = request.body.title || 'this book';
+    // let author = request.body.author || 'this author';
+    let url = `https://www.googleapis.com/books/v1/volumes?q=intitle:${title}`;
+    console.log(url);
 
-  superagent.get(url)
-    .then(data => {
-      const show = data.body.items.map(object => new Book(object));
-      return show;
-    });
-  response.render('pages/searches/show');
+    superagent.get(url)
+      .then(data => {
+        console.log(data.body.items);
+        const show = data.body.items.map(show => new Book(show.volumeInfo));
+        response.render('pages/searches/show', {books: show});
+        
+        console.log('show', show);
+        // response.send(200).json(show);
+      });
+  }
+  catch(error){
+
+    errorHandler('something went wrong', request, response);
+
+  }
 });
 
+function errorHandler(error, request, response) {
+  response.status(500).send(error);
+}
 // Book Object
-function Book(books) {
-  this.title = books.title;
-  this.author = books.authors;
+function Book(show) {
+  this.title = show.title;
+  this.author = show.authors || 'No authors!!';
 }
 
 

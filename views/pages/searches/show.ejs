@@ -14,9 +14,10 @@
     </h1>
 
     <ul>
-      <% show.map( book => { %>
+      <% books.map( book => { %>
       <li>
-        <%= book.volumeInfo.title %>
+     
+       <%= book.title %>
       </li>
       <% }) %>
     </ul>
