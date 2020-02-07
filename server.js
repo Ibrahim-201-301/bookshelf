@@ -72,12 +72,12 @@ app.post('/searches', (request, response) => {
 });
 
 function errorHandler(error, request, response) {
-  response.status(500).send(error);
+  response.render('pages/error.ejs');
 }
 // Book Object
 function Book(show) {
   this.title = show.title;
-  this.author = show.authors || 'No authors!!';
+  this.authors = show.authors || ['No authors!!'];
 }
 
 

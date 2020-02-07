@@ -16,9 +16,13 @@
     <ul>
       <% books.map( book => { %>
       <li>
-     
        <%= book.title %>
       </li>
+      <% for(let i=0; i < book.authors.length; i++){ %>
+        <li>
+          <%= book.authors[i] %>   
+        </li>
+     <% }%>
       <% }) %>
     </ul>
 </body>
