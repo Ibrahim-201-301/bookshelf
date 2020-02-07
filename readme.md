@@ -33,22 +33,22 @@ Finish time: 7:30pm
 Actual time needed to complete: 30 minutes
 
 ### Feature 2: Google Books API
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1 hour
 
-Start time: _____
+Start time: 6:00pm
 
-Finish time: _____
+Finish time: 7:30pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 1:30 hour
 
 ### Feature 3: Search Result Browsability
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 20min
 
-Start time: _____
+Start time: 7:31pm
 
-Finish time: _____
+Finish time: 7:51pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 20min
 
 ### Feature 4: Error Messages
 Estimate of time needed to complete: _____
