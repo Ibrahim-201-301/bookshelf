@@ -4,16 +4,19 @@
 **Version**: 1.0.0
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for a Code 301 class. (i.e. What's your problem domain?) -->
+Allows the user to search for books using the Google Books API.
+Allows the user to search by title or by author.
+Returns a list of 10 relevant books based on search input.
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+1. Clone app from github and run npm install
+2. npm install dependencies (dotenv, superagent, cors, express, ejs)
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+Utilizes dotenv, superagent, cors, express, and ejs
 
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an examples:
+<!-- Here's an example:
 
 01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
 -->
@@ -42,22 +45,22 @@ Finish time: 7:30pm
 Actual time needed to complete: 1:30 hour
 
 ### Feature 3: Search Result Browsability
-Estimate of time needed to complete: 20min
+Estimate of time needed to complete: 20 min
 
 Start time: 7:31pm
 
 Finish time: 7:51pm
 
-Actual time needed to complete: 20min
+Actual time needed to complete: 20 min
 
 ### Feature 4: Error Messages
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 10 min
 
-Start time: _____
+Start time: 8:00pm
 
-Finish time: _____
+Finish time: 8:10pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 10 min
 
 ### Feature 5: Clean UI
 Estimate of time needed to complete: _____
@@ -69,10 +72,10 @@ Finish time: _____
 Actual time needed to complete: _____
 
 ### Feature 6: Homepage
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 10 min
 
-Start time: _____
+Start time: 8:10pm
 
-Finish time: _____
+Finish time: 8:20pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 10 min

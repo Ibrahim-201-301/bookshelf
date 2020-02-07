@@ -9,22 +9,23 @@
     <link rel="stylesheet" href="/styles/layout.css">
   </head>
   <body>
-    <h1>
-      Book List
-    </h1>
-
+    <div id="booklist">
+      <h1>
+        Book List
+      </h1>
     <ul>
       <% books.map( book => { %>
-      <li>
+      <li id="booktitle">
        <%= book.title %>
       </li>
       <% for(let i=0; i < book.authors.length; i++){ %>
-        <li>
-          <%= book.authors[i] %>   
+        <li id="authorname">
+          <%= book.authors[i] %>
         </li>
      <% }%>
       <% }) %>
     </ul>
+    </div>
 </body>
 <footer>
 </footer>
