@@ -24,13 +24,13 @@
 ## Feature Tasks
 
 ### Feature 1: App Load
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30 minutes
 
-Start time: _____
+Start time: 7:00pm
 
-Finish time: _____
+Finish time: 7:30pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 30 minutes
 
 ### Feature 2: Google Books API
 Estimate of time needed to complete: _____

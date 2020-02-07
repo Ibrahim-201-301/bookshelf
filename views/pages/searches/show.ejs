@@ -9,12 +9,18 @@
     <link rel="stylesheet" href="/styles/layout.css">
   </head>
   <body>
-    <main>
-      <div id="index-div">
-        <h1>Index Text</h1>
-      </div>
-    </main>
-  </body>
-  <footer>
-  </footer>
+    <h1>
+      Book List
+    </h1>
+
+    <ul>
+      <% show.map( book => { %>
+      <li>
+        <%= book.volumeInfo.title %>
+      </li>
+      <% }) %>
+    </ul>
+</body>
+<footer>
+</footer>
 </html>

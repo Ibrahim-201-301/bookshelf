@@ -1,9 +1,17 @@
 html {
-  background-color: rgba(172, 194, 241, 0.5)
+  background-color: rgba(172, 194, 241, 0.5);
 }
 
 #formsection {
   width: 300px;
   height: auto;
   margin: auto;
+  background-color: rgba(104, 146, 238, 0.5);
+}
+
+#home-section {
+  width: 300px;
+  height: auto;
+  margin: auto;
+  background-color: rgba(104, 146, 238, 0.5);
 }
