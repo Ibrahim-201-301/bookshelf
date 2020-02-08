@@ -1,0 +1,57 @@
+/* Form Styling */
+
+#formsection {
+  width: 75%;
+  height: auto;
+  margin: auto;
+  border: 1px solid black;
+  padding: 1%;
+  background-color: rgba(104, 146, 238, 0.5);
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  margin: 1%;
+}
+
+button {
+  background-color: rgba(46, 107, 238, 0.5);
+  border: 0.2em solid black;
+
+}
+
+/* Homepage Styling */
+
+#index-div {
+  width: 75%;
+  height: auto;
+  margin: auto;
+  text-align: center;
+  padding: 1%;
+  background-color: rgba(104, 146, 238, 0.5);
+}
+
+/* Results Styling */
+
+#booklist {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+}
+
+#booktitle {
+  color: black;
+  padding-bottom: 0.25em;
+  font-weight: bold;
+  overflow: wrap;
+}
+
+#authorname {
+  color: rgba(7, 38, 104, 0.5);
+  padding-bottom: 0.5em;
+  overflow: wrap;
+}
