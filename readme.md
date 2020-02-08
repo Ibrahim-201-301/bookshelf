@@ -1,7 +1,7 @@
 # Book App
 
 **Author**: Cas Olejniczak & Eyob Tamir
-**Version**: 1.0.0
+**Version**: 1.1.0
 
 ## Overview
 Allows the user to search for books using the Google Books API.
@@ -16,17 +16,18 @@ Returns a list of 10 relevant books based on search input.
 Utilizes dotenv, superagent, cors, express, and ejs
 
 ## Change Log
-<!-- Here's an example:
+02-08-2020 9:00am --- allows the user to search for books by title or author and returns 10 relevant items from the Google Books API
 
-01-01-2001 4:59pm - Application now has a fully-functional express server, with GET and POST routes for the book resource.
--->
+02-10-2020 6:30pm --- in addition to previous functionality, allows the user to save specific books to a list, which will be rendered to the homepage and also stored in a database
 
 ## Credits and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+
 
 ## Feature Tasks
 
-### Feature 1: App Load
+### Lab 11
+
+#### Feature 1: App Load
 Estimate of time needed to complete: 30 minutes
 
 Start time: 7:00pm
@@ -35,7 +36,7 @@ Finish time: 7:30pm
 
 Actual time needed to complete: 30 minutes
 
-### Feature 2: Google Books API
+#### Feature 2: Google Books API
 Estimate of time needed to complete: 1 hour
 
 Start time: 6:00pm
@@ -44,7 +45,7 @@ Finish time: 7:30pm
 
 Actual time needed to complete: 1:30 hour
 
-### Feature 3: Search Result Browsability
+#### Feature 3: Search Result Browsability
 Estimate of time needed to complete: 20 min
 
 Start time: 7:31pm
@@ -53,7 +54,7 @@ Finish time: 7:51pm
 
 Actual time needed to complete: 20 min
 
-### Feature 4: Error Messages
+#### Feature 4: Error Messages
 Estimate of time needed to complete: 10 min
 
 Start time: 8:00pm
@@ -62,16 +63,16 @@ Finish time: 8:10pm
 
 Actual time needed to complete: 10 min
 
-### Feature 5: Clean UI
-Estimate of time needed to complete: _____
+#### Feature 5: Clean UI
+Estimate of time needed to complete: 45 min
 
-Start time: _____
+Start time: 5:00pm
 
-Finish time: _____
+Finish time: 6:00pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 30 min
 
-### Feature 6: Homepage
+#### Feature 6: Homepage
 Estimate of time needed to complete: 10 min
 
 Start time: 8:10pm
@@ -79,3 +80,52 @@ Start time: 8:10pm
 Finish time: 8:20pm
 
 Actual time needed to complete: 10 min
+
+-------------------------------------------------
+
+### Lab 12
+
+#### Feature 1: Display Saved Books to Homepage
+Estimate of time needed to complete: 30 minutes
+
+Start time: 7:00pm
+
+Finish time: 7:30pm
+
+Actual time needed to complete: 30 minutes
+
+#### Feature 2: Get Book Details
+Estimate of time needed to complete: 1 hour
+
+Start time: 6:00pm
+
+Finish time: 7:30pm
+
+Actual time needed to complete: 1:30 hour
+
+#### Feature 3: Save Books
+Estimate of time needed to complete: 20 min
+
+Start time: 7:31pm
+
+Finish time: 7:51pm
+
+Actual time needed to complete: 20 min
+
+#### Feature 4: Creating Partials
+Estimate of time needed to complete: 10 min
+
+Start time: 8:00pm
+
+Finish time: 8:10pm
+
+Actual time needed to complete: 10 min
+
+#### Feature 5: Clean UI
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
