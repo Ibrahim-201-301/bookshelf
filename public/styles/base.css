@@ -3,57 +3,7 @@ html {
   width: 100%;
 }
 
-#formsection {
-  width: 75%;
-  height: auto;
-  margin: auto;
-  border: 1px solid black;
-  padding: 1%;
-  background-color: rgba(104, 146, 238, 0.5);
-}
-
-form {
-  display: flex;
-  justify-content: center;
-}
-
-input {
-  margin: 1%;
-}
-
-button {
-  background-color: rgba(46, 107, 238, 0.5);
-  border: 0.2em solid black;
-
-}
-
-#index-div {
-  width: 75%;
-  height: auto;
-  margin: auto;
-  border: 1px solid red;
-  padding: 1%;
-  background-color: rgba(104, 146, 238, 0.5);
-}
-
-#booklist {
-  width: 75%;
-  margin: auto;
-  text-align: center;
-}
-
 h1 {
   font-size: 2em;
   padding-bottom: 1em;
-}
-
-#booktitle {
-  color: black;
-  padding-bottom: 0.25em;
-  font-weight: bold;
-}
-
-#authorname {
-  color: olivedrab;
-  padding-bottom: 0.5em;
 }
