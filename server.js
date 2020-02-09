@@ -4,6 +4,7 @@ require ('dotenv').config();
 // App Dependencies
 const superagent = require('superagent');
 const express = require('express');
+const pg = require('pg');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -12,6 +13,10 @@ app.use(express.static('./public'));
 app.set('view engine', 'ejs');
 
 app.use(express.urlencoded({ extended: true }));
+
+const client = new pg.Client(process.env.DATABASE_URL);
+
+// client.on('error', err => console.error(err));
 
 // Routes
 
@@ -22,14 +27,21 @@ app.get('/error', (request, response) => {
 
 // Homepage
 app.get('/', (request, response) => {
-  response.render('pages/index.ejs');
+  let SQL = `SELECT * FROM booklist;`;
+  client.query(SQL)
+    .then(result => {
+      console.log(result.rows);
+      response.render('pages/index.ejs', {books: result.rows});
+    });
+
+
+  // response.render('pages/index.ejs');
 });
 
 // Display New Search Form via this route
 app.get('/searches/new', (request, response) => {
   response.render('pages/searches/new.ejs');
 });
-
 // Display Search Results
 app.post('/searches', createSearch);
 
@@ -55,6 +67,7 @@ function createSearch(request, response) {
   }
 }
 
+
 // Helper Functions
 function errorHandler(error, request, response) {
   response.render('pages/error.ejs');
@@ -63,7 +76,15 @@ function errorHandler(error, request, response) {
 // Book Object
 function Book(show) {
   this.title = show.title;
-  this.authors = show.authors || ['No authors!!'];
+  this.authors = show.authors ? show.authors.join(', ') : 'No authors!!';
+  this.isbn = show.industryIdentifiers.type ? show.industryIdentifiers.type.join(' ') : 'No ISBN';
+  this.image_url = `<img src="${show.imageLinks.smallThumbnail}">` || 'No Image';
+  this.description = show.description || 'No Description';
 }
-
-app.listen(PORT, () => console.log(`server up on Port ${PORT}`));
+client.connect()
+  .then( () => {
+    app.listen(PORT, () => console.log(`Server up on ${PORT}`));
+  });
+// .catch(err => {
+//   console.error('pg connect error', err);
+// })

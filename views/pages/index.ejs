@@ -13,6 +13,27 @@
       <div id="index-div">
         <h1>Book App!</h1>
       </div>
+      <div id="booklist">
+      <ul>
+        <% books.map( book => { %>
+        <li id="booktitle">
+         <%= book.title %>
+        </li>
+        <li id="authorname">
+            <%= book.author %>
+        </li>
+        <li id="bookisbn">
+          <%= book.isbn %>
+         </li>
+         <li id="bookimg">
+             <%= book.image_url %>
+         </li>
+         <li id="bookdes">
+          <%= book.description %>
+      </li>
+        <% }) %>
+      </ul>
+      </div>
     </main>
   </body>
   <footer>

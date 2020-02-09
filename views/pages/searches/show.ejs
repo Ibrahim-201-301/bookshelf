@@ -15,14 +15,23 @@
       </h1>
     <ul>
       <% books.map( book => { %>
+      <li id="bookimg">
+      <%- book.image_url %>
+      </li>
       <li id="booktitle">
        <%= book.title %>
       </li>
-      <% for(let i=0; i < book.authors.length; i++){ %>
+       %>
         <li id="authorname">
-          <%= book.authors[i] %>
+        <%= book.authors %>
         </li>
-     <% }%>
+        <li id="bookisbn">
+          <%= book.isbn %>
+          </li>
+          <li id="bookdes">
+            <%= book.description %>
+            </li>
+
       <% }) %>
     </ul>
     </div>
