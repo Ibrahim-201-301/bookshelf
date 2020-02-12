@@ -16,7 +16,6 @@ app.use(express.urlencoded({ extended: true }));
 
 const client = new pg.Client(process.env.DATABASE_URL);
 
-// client.on('error', err => console.error(err));
 
 // Routes
 
@@ -42,10 +41,9 @@ app.get('/', (request, response) => {
 app.get('/searches/new', (request, response) => {
   response.render('pages/searches/new.ejs');
 });
+
 // Display Search Results
 app.post('/searches', createSearch);
-
-// Filter Results by Title or Author, Populate Search Results
 function createSearch(request, response) {
   try {
     let url = `https://www.googleapis.com/books/v1/volumes?q=`;
@@ -66,7 +64,24 @@ function createSearch(request, response) {
     errorHandler('something went wrong', request, response);
   }
 }
+//Save search Results
+app.post('/books/show.ejs', saveSearch);
+function saveSearch(request, response){
+  let image_url = request.body.image_url;
+  let title = request.body.title;
+  let authors = request.body.authors;
+  let isbn = request.body.isbn;
+  let description = request.body.description;
 
+  let SQL = 'INSERT INTO booklist(image_url, title, authors, isbn, description) VALUES ($1, $2, $3, $4, $5);';
+  let VALUES = [image_url, title, authors, isbn, description];
+  client.query(SQL, VALUES)
+    .then(result =>{
+      response.render('/', {books: result.rows[0]});
+    })
+    .catch(err => errorHandler(err, response));
+
+}
 
 // Helper Functions
 function errorHandler(error, request, response) {
