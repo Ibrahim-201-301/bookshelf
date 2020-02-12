@@ -36,7 +36,9 @@ button {
 }
 
 /* Results Styling */
-
+#bookapp{
+border:1px solid skyblue;
+}
 #booklist {
   width: 75%;
   margin: auto;
