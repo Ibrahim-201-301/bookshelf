@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>BookApp</title>
-    <link rel="stylesheet" href="/styles/reset.css">
-    <link rel="stylesheet" href="/styles/base.css">
-    <link rel="stylesheet" href="/styles/icons.css">
-    <link rel="stylesheet" href="/styles/modules.css">
-    <link rel="stylesheet" href="/styles/layout.css">
-  </head>
-  <body>
-    <div id="booklist">
-      <h1>
-        Book List
-      </h1>
-    <ul id = "bookapp">
+
+<head>
+  <title>BookApp</title>
+  <link rel="stylesheet" href="/styles/reset.css">
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="/styles/icons.css">
+  <link rel="stylesheet" href="/styles/modules.css">
+  <link rel="stylesheet" href="/styles/layout.css">
+</head>
+
+<body>
+  <div id="booklist">
+    <h1>
+      Book List
+    </h1>
+    <ul id="bookapp">
       <% books.map( book => { %>
       <li id="bookimg">
-      <%- book.image_url %>
+        <%- book.image_url %>
       </li>
       <li id="booktitle">
-       <%= book.title %>
+        <%= book.title %>
       </li>
-       %>
-        <li id="authorname">
+      <li id="authorname">
         <%= book.authors %>
-        </li>
-        <li id="bookisbn">
-          <%= book.isbn %>
-          </li>
-          <li id="bookdes">
-            <%= book.description %>
-            </li>
-        <form action="/books" method="post">
-          <input type="hidden" name ="image_url" value="<%= book.image_url %>"/>
-          <input type="hidden" name ="title" value="<%= book.title %>"/>
-          <input type="hidden" name ="authors" value="<%= book.authors %>"/>
-          <input type="hidden" name ="isbn" value="<%= book.isbn %>"/>
-          <input type="hidden" name ="description" value="<%= book.description %>"/>
-          <button type="submit">Save the booktitle</button>
-        </form>
+      </li>
+      <li id="bookisbn">
+        <%= book.isbn %>
+      </li>
+      <li id="bookdes">
+        <%= book.description %>
+      </li>
+      <form action="/" method="post" >
+        <input type="hidden" name="image_url" value="<%= book.image_url %>" />
+        <input type="hidden" name="title" value="<%= book.title %>" />
+        <input type="hidden" name="authors" value="<%= book.authors %>" />
+        <input type="hidden" name="isbn" value="<%= book.isbn %>" />
+        <input type="hidden" name="description" value="<%= book.description %>" />
+        <button type="submit">Save the booktitle</button>
+      </form>
       <% }) %>
     </ul>
 
-    </div>
+  </div>
 </body>
 <footer>
 </footer>
+
 </html>

@@ -88,11 +88,11 @@ Actual time needed to complete: 10 min
 #### Feature 1: Display Saved Books to Homepage
 Estimate of time needed to complete: 30 minutes
 
-Start time: 7:00pm
+Start time: 6:00pm
 
-Finish time: 7:30pm
+Finish time: 7:00pm
 
-Actual time needed to complete: 30 minutes
+Actual time needed to complete: 1 hour
 
 #### Feature 2: Get Book Details
 Estimate of time needed to complete: 1 hour
@@ -106,11 +106,11 @@ Actual time needed to complete: 1:30 hour
 #### Feature 3: Save Books
 Estimate of time needed to complete: 20 min
 
-Start time: 7:31pm
+Start time: 7:15pm
 
-Finish time: 7:51pm
+Finish time: 8:00pm
 
-Actual time needed to complete: 20 min
+Actual time needed to complete: 45 min
 
 #### Feature 4: Creating Partials
 Estimate of time needed to complete: 10 min

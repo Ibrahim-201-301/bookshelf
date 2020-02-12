@@ -29,7 +29,7 @@ app.get('/', (request, response) => {
   let SQL = `SELECT * FROM booklist;`;
   client.query(SQL)
     .then(result => {
-      console.log(result.rows);
+      console.log(result.rows[0]);
       response.render('pages/index.ejs', {books: result.rows});
     });
 
@@ -65,22 +65,28 @@ function createSearch(request, response) {
   }
 }
 //Save search Results
-app.post('/books/show.ejs', saveSearch);
+app.post('/', saveSearch);
+
 function saveSearch(request, response){
+  console.log('hello from saveSearch');
   let image_url = request.body.image_url;
   let title = request.body.title;
   let authors = request.body.authors;
   let isbn = request.body.isbn;
   let description = request.body.description;
+  console.log('selected title: ', title);
 
-  let SQL = 'INSERT INTO booklist(image_url, title, authors, isbn, description) VALUES ($1, $2, $3, $4, $5);';
-  let VALUES = [image_url, title, authors, isbn, description];
-  client.query(SQL, VALUES)
-    .then(result =>{
-      response.render('/', {books: result.rows[0]});
+  let SQL = `INSERT INTO booklist (image_url, title, authors, isbn, description) VALUES ($1, $2, $3, $4, $5);`;
+  let VALUES = [image_url, title, authors, isbn, description.slice(0, 255)];
+  console.log('SQL values for selected book:', VALUES);
+  // let queryResult = await client.query(SQL, VALUES);
+  // console.log(queryResult);
+  client.query(SQL, VALUES);
+  client.query(`SELECT * FROM booklist`)
+    .then(result => {
+      response.render('pages/index.ejs', {books: result.rows});
     })
-    .catch(err => errorHandler(err, response));
-
+    .catch(error => errorHandler(error, request, response));
 }
 
 // Helper Functions
