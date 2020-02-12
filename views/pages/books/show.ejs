@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>BookApp</title>
-    <link rel="stylesheet" href="/styles/reset.css">
-    <link rel="stylesheet" href="/styles/base.css">
-    <link rel="stylesheet" href="/styles/icons.css">
-    <link rel="stylesheet" href="/styles/modules.css">
-    <link rel="stylesheet" href="/styles/layout.css">
-  </head>
-  <body>
-    <div id="booklist">
-      <h1>
-        Book List
-      </h1>
-    <ul id = "bookapp">
-      <% books.map( book => { %>
+
+<head>
+  <title>BookApp</title>
+  <link rel="stylesheet" href="/styles/reset.css">
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="/styles/icons.css">
+  <link rel="stylesheet" href="/styles/modules.css">
+  <link rel="stylesheet" href="/styles/layout.css">
+</head>
+
+<body>
+  <div id="booklist">
+    <h1>
+      Book List
+    </h1>
+    <ul id="bookapp">
+      <% books.forEach( book => { %>
       <li id="bookimg">
-      <%- book.image_url %>
+        <%- book.image_url %>
       </li>
       <li id="booktitle">
-       <%= book.title %>
+        <%= book.title %>
       </li>
-       %>
-        <li id="authorname">
+      <li id="authorname">
         <%= book.authors %>
-        </li>
-        <li id="bookisbn">
-          <%= book.isbn %>
-          </li>
-          <li id="bookdes">
-            <%= book.description %>
-            </li>
-            <% }) %>
-          </ul>
-      
-          </div>
-      </body>
-      <footer>
-      </footer>
-      </html>
+      </li>
+      <li id="bookisbn">
+        <%= book.isbn %>
+      </li>
+      <li id="bookdes">
+        <%= book.description %>
+      </li>
+      <% }) %>
+    </ul>
+
+  </div>
+</body>
+<footer>
+</footer>
+
+</html>
