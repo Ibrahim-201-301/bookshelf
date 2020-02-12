@@ -17,6 +17,7 @@
     </h1>
     <ul id="bookapp">
       <% books.map( book => { %>
+      <div id="eachbook">
       <li id="bookimg">
         <%- book.image_url %>
       </li>
@@ -40,6 +41,7 @@
         <input type="hidden" name="description" value="<%= book.description %>" />
         <button type="submit">Save the booktitle</button>
       </form>
+      </div>
       <% }) %>
     </ul>
 

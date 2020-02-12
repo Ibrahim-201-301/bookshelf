@@ -15,9 +15,13 @@
     <div id="index-div">
       <h1>Book App!</h1>
     </div>
+    <div id="newsearch">
+      <a href="searches/new">Search for New Book</a>
+    </div>
     <div id="booklist">
       <ul>
         <% books.forEach( book => { %>
+        <div id="eachbook">
         <li id="bookimg">
           <%- book.image_url %>
         </li>
@@ -33,6 +37,7 @@
         <li id="bookdes">
           <%= book.description %>
         </li>
+      </div>
         <% }) %>
       </ul>
     </div>

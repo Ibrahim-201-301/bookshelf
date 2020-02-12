@@ -35,25 +35,49 @@ button {
   background-color: rgba(104, 146, 238, 0.5);
 }
 
-/* Results Styling */
-#bookapp{
-border:1px solid skyblue;
+a {
+  text-decoration: none;
+  background-color: #eee;
 }
+
+/* Results Styling */
+
+
 #booklist {
-  width: 75%;
+  width: 50%;
   margin: auto;
   text-align: center;
 }
 
+#eachbook {
+  border: 1px solid green;
+  background-color: #eee;
+  margin: 1.5em;
+}
+
+#bookimg {
+padding: 0.5em;
+}
+
 #booktitle {
-  color: black;
+  color:#111;
   padding-bottom: 0.25em;
+  font-size: 1.5em;
   font-weight: bold;
   overflow: wrap;
 }
 
 #authorname {
   color: rgba(7, 38, 104, 0.5);
+  font-weight: bold;
   padding-bottom: 0.5em;
   overflow: wrap;
+}
+
+#bookisbn {
+  color: rgba(7, 38, 105, 0.5);
+}
+
+#bookdes {
+  padding: 1em;
 }
