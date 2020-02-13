@@ -9,21 +9,34 @@
   <link rel="stylesheet" href="/styles/modules.css">
   <link rel="stylesheet" href="/styles/layout.css">
 </head>
-
 <body>
   <div id="booklist">
     <h1>
-      Book Detail
+      Book Details
     </h1>
-   
-      <p> <%- books.image_url %> </p>
-      <p> <%= books.title %> </p>
-      <p> <%= books.authors %> </p>
-      <p> <%= books.isbn %> </p>
-      <p> <%= books.description %> </p>
-    
-
+    <p> <%- books.image_url %> </p>
+    <p> <%= books.title %> </p>
+    <p> <%= books.authors %> </p>
+    <p> <%= books.isbn %> </p>
+    <p> <%= books.description %> </p>
+  
+    <div id="deletebutton">
+      <form method="post" action ="/books/<%- books.id %>?_method=delete">
+        <button type="submit">Remove from List</button>
+      </form>
   </div>
+  <div id="returnhome">
+    <a href="../../">Return to Homepage</a>
+  </div>
+  <div id="updatebutton">
+    <form method="post" action="/books/<%- books.id %>?_method=put">
+      <input type="text" name="title" value="<%- books.title %>" />
+      <input type="text" name="authors" value="<%- books.authors %>" />
+      <input type="text" name="description" value="<%- books.description %>" />
+      <button type="submit" value="Reset">Update Book</button>
+    </form>
+  </div>
+  </div> 
 </body>
 <footer>
 </footer>

@@ -122,10 +122,32 @@ Finish time: 8:10pm
 Actual time needed to complete: 10 min
 
 #### Feature 5: Clean UI
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 20 min
 
-Start time: _____
+Start time: 8:20pm
 
-Finish time: _____
+Finish time: 8:45pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 25 min
+
+-------------------------------------------------
+
+### Lab 13
+
+#### Feature 1: Update
+Estimate of time needed to complete: 45 min
+
+Start time: 6:00pm
+
+Finish time: 7:15pm
+
+Actual time needed to complete: 1 hour 15 min
+
+#### Feature 2: Delete
+Estimate of time needed to complete: 30 min
+
+Start time: 7:30pm
+
+Finish time: 8:00pm
+
+Actual time needed to complete: 30 min
