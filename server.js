@@ -89,6 +89,19 @@ function saveSearch(request, response){
     .catch(error => errorHandler(error, request, response));
 }
 
+app.get('/books/:id', bookDetail);
+
+function bookDetail(request, response){
+  let SQL = `SELECT * FROM booklist WHERE id = $1;`;
+  let VALUES = [request.params.id];
+  client.query(SQL, VALUES);
+  client.query(`SELECT * FROM booklist`)
+    .then(result => {
+      response.render('./pages/books/detail.ejs', {books: result.rows[0]});
+    })
+    .catch(error => errorHandler(error, request, response));
+}
+
 // Helper Functions
 function errorHandler(error, request, response) {
   response.render('pages/error.ejs');
