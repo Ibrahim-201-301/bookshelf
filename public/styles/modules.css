@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
 /* Form Styling */
 
 #formsection {
@@ -26,10 +27,11 @@ button {
 
 /* Homepage Styling */
 
-#index-div {
+.header {
   width: 75%;
   height: auto;
   margin: auto;
+  font-family: 'Merriweather', serif;
   text-align: center;
   padding: 1%;
   background-color: rgba(104, 146, 238, 0.5);
