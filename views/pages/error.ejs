@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>BookApp</title>
+  <link rel="stylesheet" href="/styles/reset.css">
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="/styles/icons.css">
+  <link rel="stylesheet" href="/styles/modules.css">
+  <link rel="stylesheet" href="/styles/layout.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
 </head>
 <body>
-  <h1>
-    Error msg
+  <div class="header">
+    <%- include('../layout/header') %>
+  </div>
+  <nav role="navigation">
+    <%- include('../layout/nav') %>
+  </nav>  
+  <h1 id="errormsg">
+    Oops! There's been an error. 
   </h1>
 </body>
 </html>

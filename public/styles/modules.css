@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+
+/* ------------------------------------------- */
+
 /* Form Styling */
 
 #formsection {
   width: 75%;
   height: auto;
   margin: auto;
-  border: 1px solid black;
+  margin-top: 100px;
   padding: 1%;
-  background-color: rgba(104, 146, 238, 0.5);
+  background: #232323;
 }
 
 form {
@@ -15,35 +18,48 @@ form {
   justify-content: center;
 }
 
+legend {
+  padding: 2em;
+  width: 90%;
+  margin: auto;
+  border: 1px solid #6d6c6c;
+}
+
 input {
   margin: 1%;
 }
 
-button {
+.detailbutton {
+  text-decoration: none;
+  color: #eee;
   background-color: rgba(46, 107, 238, 0.5);
-  border: 0.2em solid black;
-
+  font-family: 'Montserrat', sans-serif;
+  margin: 1em;
 }
+/* ------------------------------------------- */
 
 /* Homepage Styling */
 
 .header {
-  width: 75%;
+  width: 100%;
   height: auto;
   margin: auto;
   font-family: 'Merriweather', serif;
   text-align: center;
   padding: 1%;
-  background-color: rgba(104, 146, 238, 0.5);
+  background: #232323;
+  color: #eee;
 }
 
 a {
   text-decoration: none;
-  background-color: #eee;
+  color: #eee;
+  background-color: rgba(46, 107, 238, 0.5);
+  /* border: 0.2em solid black; */
 }
+/* ------------------------------------------- */
 
 /* Results Styling */
-
 
 #booklist {
   width: 50%;
@@ -52,7 +68,6 @@ a {
 }
 
 #eachbook {
-  border: 1px solid green;
   background-color: #eee;
   margin: 1.5em;
 }

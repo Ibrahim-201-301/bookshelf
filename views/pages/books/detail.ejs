@@ -10,9 +10,15 @@
   <link rel="stylesheet" href="/styles/layout.css">
 </head>
 <body>
+
   <div class="header">
     <%- include('../../layout/header') %>
   </div>
+
+  <nav role="navigation">
+    <%- include('../../layout/nav') %>
+  </nav>  
+
   <div id="booklist">
     <h1>
       Book Details
@@ -25,18 +31,16 @@
   
     <div id="deletebutton">
       <form method="post" action ="/books/<%- books.id %>?_method=delete">
-        <button type="submit">Remove from List</button>
+        <button class="detailbutton" type="submit">Remove from List</button>
       </form>
   </div>
-  <div id="returnhome">
-    <a href="../../">Return to Homepage</a>
-  </div>
+
   <div id="updatebutton">
     <form method="post" action="/books/<%- books.id %>?_method=put">
       <input type="text" name="title" value="<%- books.title %>" />
       <input type="text" name="authors" value="<%- books.authors %>" />
       <input type="text" name="description" value="<%- books.description %>" />
-      <button type="submit" value="Reset">Update Book</button>
+      <button class="detailbutton" type="submit" value="Reset">Update Book</button>
     </form>
   </div>
   </div> 

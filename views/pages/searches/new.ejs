@@ -9,19 +9,31 @@
     <link rel="stylesheet" href="/styles/layout.css">
   </head>
   <body>
-    <div class="header">
-      <%- include('../../layout/header') %>
-    </div>
+    <header>
+      <div class="header">
+        <%- include('../../layout/header') %>
+      </div>
+      <nav role="navigation">
+      <%- include('../../layout/nav') %>
+      </nav>  
+    </header>
     <main>
       <section id="formsection">
         <form method="post" action="/searches">
+          <fieldset>
+            <legend>Search for a new book:
             <input type="text" name ="search" placeholder="Title or Author"/>
             <!-- buttons -->
-            <label for="titleauth"> Search By Title</label>
+            <br>
+            <label for="titleauth">By Title</label>
             <input type="radio" name="titleauth" value="title"/>
-            <label for="titleauth"> Search By Author</label>
+            <br>
+            <label for="titleauth">By Author</label>
             <input type="radio" name="titleauth" value="author"/>
+            <br><br>
             <button>Search</button>
+          </legend>
+          </fieldset>
         </form>
       </section>
     </main>
