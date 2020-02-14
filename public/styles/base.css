@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 html {
-  background-color: rgba(172, 194, 241, 0.5);
+  background-color:#232323;
   width: 100%;
   font-family: 'Montserrat', sans-serif;
 }
@@ -10,6 +10,7 @@ h1 {
   font-size: 2em;
   padding-bottom: 1em;
 }
+
 /*
  * Made by Erik Terwan
  * 24th of November 2015
