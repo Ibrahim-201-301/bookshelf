@@ -158,5 +158,7 @@ function Book(show) {
 client.connect()
   .then( () => {
     app.listen(PORT, () => console.log(`Server up on ${PORT}`));
-  });
+  })
+  .catch(error => errorHandler(error));
+
 
