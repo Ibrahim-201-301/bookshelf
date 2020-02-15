@@ -22,6 +22,11 @@ Utilizes dotenv, superagent, cors, express, and ejs
 
 ## Credits and Collaborations
 
+#### HAMBURGER MENU NAVBAR
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT License
+[https://amazingcss.com/pure-css-hamburger-fold-out-menu-by-erik-terwan]
 
 ## Feature Tasks
 
