@@ -1,24 +1,27 @@
 # Book App
 
 **Author**: Cas Olejniczak & Eyob Tamir
-**Version**: 1.1.0
+**Version**: 1.2.0
 
 ## Overview
 Allows the user to search for books using the Google Books API.
 Allows the user to search by title or by author.
 Returns a list of 10 relevant books based on search input.
+Allows the user to save books to a personal list, which responds to a database
 
 ## Getting Started
 1. Clone app from github and run npm install
-2. npm install dependencies (dotenv, superagent, cors, express, ejs)
+2. npm install dependencies (dotenv, superagent, cors, express, ejs, pg, method-override)
 
 ## Architecture
-Utilizes dotenv, superagent, cors, express, and ejs
+Utilizes dotenv, superagent, cors, express, method-override, pg, and ejs
 
 ## Change Log
-02-08-2020 9:00am --- allows the user to search for books by title or author and returns 10 relevant items from the Google Books API
+02-08-2020 9:00am --- Allows the user to search for books by title or author and returns 10 relevant items from the Google Books API
 
 02-10-2020 6:30pm --- in addition to previous functionality, allows the user to save specific books to a list, which will be rendered to the homepage and also stored in a database
+
+09-13-2020 6:30pm --- In addition to previous functionality, allows the user to update information for books saved to their database, including Author Name, Book Title, and Description. Nav Bar installed.
 
 ## Credits and Collaborations
 
